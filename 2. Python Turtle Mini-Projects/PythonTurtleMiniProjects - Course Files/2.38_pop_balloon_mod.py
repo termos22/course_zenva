@@ -30,7 +30,7 @@ def deflate_balloon():
 draw_balloon() # rysuje początkowy balon na ekranie
 
 onkey(inflate_balloon, "Up") # czyta wejścia i uruchamia funkcję, w tym przypadku powiększa balon za pomocą klawisza strzałki w górę
-onkey(deflate_balloon, "Down")
+onkey(deflate_balloon, "Down") # czyta wejścia i uruchamia funkcję, w tym przypadku pomniejsza balon za pomocą klawisza strzałki w dół
 listen() # utrzymuje program w trybie odczytywania wejść
 
 done()
