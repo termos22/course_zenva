@@ -1,7 +1,7 @@
 from turtle import *
 from random import *
 
-bgcolor("black")
+bgcolor("medium slate blue")
 hideturtle()
 speed(0)
 width = window_width()
@@ -11,7 +11,7 @@ def losowy_kolor():
     red = randint(0, 255)
     green = randint(0, 255)
     blue = randint(0, 255)
-    return (red, green, blue)
+    return (red / 255.0, green / 255.0, blue / 255.0)
 
 
 def draw_star(xpos, ypos):
@@ -19,20 +19,18 @@ def draw_star(xpos, ypos):
     penup()
     goto(xpos, ypos)
     pendown()
-    #kolor = losowy_kolor()
-    #pencolor(kolor)
-    dot(size, "white")
+    kolor = losowy_kolor()
+    dot(size, kolor)
 
 def draw_moon():
-    size = randrange(40, 60)
+    size = randrange(40, 100)
     xpos = randrange(round( -width / 2), round(width / 2))
     ypos = randrange(round(-height / 2), round(height / 2))
     penup()
     goto(xpos, ypos)
     pendown()
-    #kolor = losowy_kolor()
-    #pencolor(kolor)
-    dot(size, "white")
+    kolor = losowy_kolor()
+    dot(size, kolor)
 
 
 draw_moon()
