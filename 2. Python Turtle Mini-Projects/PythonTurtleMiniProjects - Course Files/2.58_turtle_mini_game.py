@@ -26,21 +26,25 @@ def move_up():
     setheading(90)
     forward(move_distance)
     check_goal()
+    check_borders()
 
 def move_down():
     setheading(270)
     forward(move_distance)
     check_goal()
+    check_borders()
 
 def move_left():
     setheading(180)
     forward(move_distance)
     check_goal()
+    check_borders()
 
 def move_right():
     setheading(0)
     forward(move_distance)
     check_goal()
+    check_borders()
 
 def check_goal():
     if xcor() > (width /2) - 200:
@@ -51,6 +55,19 @@ def check_goal():
         onkey(None, "Down")
         onkey(None, "Left")
         onkey(None, "Right")
+
+def check_borders():
+    if xcor() < - (width / 2):
+        goto (0, 0)
+
+    if ycor() > (height / 2):
+        goto(0, 0)
+
+    if ycor() < - (height / 2):
+        goto(0, 0)
+
+
+
 
 
 onkey(move_up, "Up")
