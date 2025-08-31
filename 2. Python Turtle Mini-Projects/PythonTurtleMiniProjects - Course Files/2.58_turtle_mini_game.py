@@ -48,6 +48,7 @@ def move_right():
 
 def check_goal():
     if xcor() > (width /2) - 200:
+        color("pink")
         hideturtle()
         color("white")
         write("YOU WIN!")
